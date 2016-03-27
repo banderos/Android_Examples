@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="top|left"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:layout_height="wrap_content"
+		style="?android:attr/buttonBarStyle"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<TextView
+			android:id="@+id/txtUrl"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+		<EditText
+			android:layout_height="wrap_content"
+			android:ems="10"
+			android:layout_width="wrap_content"
+			android:id="@+id/edUrl"/>
+
+		<Button
+			android:layout_height="wrap_content"
+			android:text="Go"
+			android:layout_width="wrap_content"
+			android:id="@+id/bGo"/>
+
+	</LinearLayout>
+
+	<LinearLayout
+		android:id="@+id/ltResult"
+		android:layout_height="wrap_content"
+		style="?android:attr/buttonBarStyle"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal">
+
+		<ScrollView
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content">
+
+			<HorizontalScrollView
+				android:id="@+id/scrlContainer"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content">
+
+				<EditText
+					android:id="@+id/txtHtmlCodes"
+					android:layout_height="wrap_content"
+					android:inputType="textMultiLine"
+					android:ems="10"
+					android:layout_width="wrap_content"
+					android:minWidth="38dp"
+					android:maxWidth="43dp"/>
+
+			</HorizontalScrollView>
+
+		</ScrollView>
+
+	</LinearLayout>
+
+</LinearLayout>
+
