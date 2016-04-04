@@ -41,8 +41,9 @@ import com.data.utils.*;
 import android.util.*;
 import jxl.*;
 import jxl.biff.formula.*;
-/**
- *
+/**<h2>Описание</h2>
+ * <p>Класс активности программы для редактирования
+ * файлов Microsoft Excel</p>
  */
 public class MainActivity extends Activity
 {
@@ -94,7 +95,7 @@ public class MainActivity extends Activity
     private ArrayAdapter spnAdapter;
 
     private ArrayList<TableRow> tableRows = new ArrayList<TableRow>();
-	private EditText txtNameSheet;
+	private EditText edNameSheet;
     private EditText et;
     private View hidingView;
     private TextView txtFilePath;
@@ -131,9 +132,6 @@ public class MainActivity extends Activity
 
                         break;
                     case R.id.bAddRow:
-
-                        break;
-                    case R.id.bAddSheet:
 
                         break;
                     case R.id.bClear:
@@ -718,10 +716,7 @@ public class MainActivity extends Activity
         table.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT
                                                , LayoutParams.WRAP_CONTENT));
         scV.addView(table);
-
-        //scV.setPadding(0, 120, 0, 0);
-        //       mainLayout.addView(scV);
-
+		
         bSave = (Button) findViewById(R.id.bSave);
         bSaveAs = (Button) findViewById(R.id.bSaveAs);
         bOpen = (Button) findViewById(R.id.bOpen);
@@ -729,19 +724,19 @@ public class MainActivity extends Activity
         bAddSheet = (Button) findViewById(R.id.bAddSheet);
         bClear = (Button) findViewById(R.id.bClear);
 
-		txtNameSheet = (EditText) findViewById(R.id.txtNameSheet);
+		edNameSheet = (EditText) findViewById(R.id.edNameSheet);
         txtFilePath = (TextView) findViewById(R.id.txtFilePath);
         txtFilePath.setText("/mnt/sdcard");
 		// настраиваем меню
         popup = new PopupMenu(ctx, bAddSheet);
         Menu menu = popup.getMenu();
 
-        popup.getMenuInflater().inflate(R.menu.com_ui_popup, menu);
+        popup.getMenuInflater().inflate(R.menu.sheet_operations, menu);
         popup.setOnMenuItemClickListener(pMenuOnItemClick);
         popup.setOnDismissListener(pMenuDissmissListener);
         bAddRow.setOnClickListener(clickListener);
         bClear.setOnClickListener(clickListener);
-        bAddSheet.setOnClickListener(clickListener);
+        bAddSheet.setOnClickListener(onClickButton);
         bOpen.setOnClickListener(clickListener);
         bSave.setOnClickListener(clickListener);
         bSaveAs.setOnClickListener(clickListener);
@@ -855,7 +850,7 @@ public class MainActivity extends Activity
             if (item != mnuDelete)
 			{
                 txtFilePath.setVisibility(View.GONE);
-                txtNameSheet.setVisibility(View.VISIBLE);
+                edNameSheet.setVisibility(View.VISIBLE);
             }
             bAddSheet.setText(ctx.getString(R.string.filemanager_OK));
             if (item == mnuDelete)
@@ -877,14 +872,11 @@ public class MainActivity extends Activity
     private View.OnClickListener onClickButton = new View.OnClickListener(){
         @Override
         public void onClick(View v)
-        {
-            File operating = null;
+        { 	// отработка показа меню
             switch (operationMode)
 			{
                 case OperationMode.CREATE_SHEET:
                 case OperationMode.RENAME_SHEET:
-
-                    break;
                 case OperationMode.DELETE:
 
                     break;
@@ -892,6 +884,7 @@ public class MainActivity extends Activity
                 default:
                     popup.show();
             }
+			// выполнение предписанных действий
             switch (operationMode)
 			{
 
@@ -907,6 +900,7 @@ public class MainActivity extends Activity
                 case OperationMode.NOTHING:
                 default:
             }
+			// финальное приведение интерфейса к исходному состоянию
             switch (operationMode)
 			{
                 case OperationMode.CREATE_SHEET:

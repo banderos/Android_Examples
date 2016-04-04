@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Начните работу с кнопки "Открыть"</string>
+    <string name="app_name">Тестирование операций с книгами Excel</string>
+	<string name="sheet_operations">+/-</string>
+	<string name="mnuAddSheet">Добавить лист</string>
+	<string name="mnuDeleteSheet">Удалить лист</string>
+	<string name="mnuRenameSheet">Переименовать лист</string>
+</resources>

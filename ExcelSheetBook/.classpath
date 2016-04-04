@@ -4,6 +4,6 @@
 <classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 <classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 <classpathentry kind="output" path="bin/classes"/>
-<classpathentry kind="lib" path="/storage/sdcard1/AppProjects/javalibs/jexcelapi/build/JFlex.jar"/>
-<classpathentry kind="lib" path="/storage/sdcard1/AppProjects/javalibs/jexcelapi/jxl.jar"/>
+<classpathentry kind="lib" path="/storage/sdcard1/AppProjects/JavaLibs/jexcelapi/build/JFlex.jar"/>
+<classpathentry kind="lib" path="/storage/sdcard1/AppProjects/JavaLibs/jexcelapi/jxl.jar"/>
 </classpath>

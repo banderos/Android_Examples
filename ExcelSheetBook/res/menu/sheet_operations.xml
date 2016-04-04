@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/mnuAddSheet"
+        android:title="@string/mnuAddSheet"/>
+	<item
+		android:id="@+id/mnuRenameSheet"
+		android:title="@string/mnuRenameSheet"/>
+	<item
+		android:id="@+id/mnuDeleteSheet"
+		android:title="@string/mnuDeleteSheet"/>
+    
+</menu>

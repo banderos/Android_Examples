@@ -1,79 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="fill_parent"
 	android:layout_height="fill_parent"
 	android:gravity="top|left|center"
 	android:orientation="vertical"
 	android:id="@+id/main">
-    <Spinner
-    android:layout_height="wrap_content"
-    android:layout_width="wrap_content"
-    android:id="@+id/spnSheetSelector"
-    android:height="20dp"/>
-    <Button
-        android:layout_height="wrap_content"
-        android:text="Add sheet"
-        android:layout_width="wrap_content"
-        android:layout_toRightOf="@id/spnSheetSelector"
-        android:id="@+id/bAddSheet"/>
-    <LinearLayout
-        android:id="@+id/barButtons"
-        android:layout_height="wrap_content"
-        style="?android:attr/buttonBarStyle"
-        android:layout_width="wrap_content"
-        android:orientation="horizontal"
-        android:layout_below="@id/spnSheetSelector">
 
-        <Button
-            android:layout_height="wrap_content"
-            android:text="Add row"
-            android:layout_width="wrap_content"
-            android:id="@+id/bAddRow"/>
+	<Spinner
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:id="@+id/spnSheetSelector"
+		android:height="20dp"/>
 
-        <Button
-            android:layout_height="wrap_content"
-            android:text="Clear sells"
-            android:layout_width="wrap_content"
-            android:id="@+id/bClear"/>
+	<Button
+		android:layout_height="wrap_content"
+		android:text="@string/sheet_operations"
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/spnSheetSelector"
+		android:id="@+id/bAddSheet"/>
 
-        <Button
-            android:layout_height="wrap_content"
-            android:text="Open"
-            android:layout_width="wrap_content"
-            android:id="@+id/bOpen"/>
+	<LinearLayout
+		android:id="@+id/barButtons"
+		android:layout_height="wrap_content"
+		style="?android:attr/buttonBarStyle"
+		android:layout_width="wrap_content"
+		android:orientation="horizontal"
+		android:layout_below="@id/spnSheetSelector">
 
-        <Button
-            android:layout_height="wrap_content"
-            android:text="Save"
-            android:layout_width="wrap_content"
-            android:id="@+id/bSave"/>
+		<Button
+			android:layout_height="wrap_content"
+			android:text="Add row"
+			android:layout_width="wrap_content"
+			android:id="@+id/bAddRow"/>
 
-        <Button
-            android:layout_height="wrap_content"
-            android:text="Save As..."
-            android:layout_width="wrap_content"
-            android:id="@+id/bSaveAs"/>
+		<Button
+			android:layout_height="wrap_content"
+			android:text="Clear sells"
+			android:layout_width="wrap_content"
+			android:id="@+id/bClear"/>
 
-    </LinearLayout>
+		<Button
+			android:layout_height="wrap_content"
+			android:text="Open"
+			android:layout_width="wrap_content"
+			android:id="@+id/bOpen"/>
 
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_toRightOf="@id/bAddSheet"
-        android:id="@+id/txtFilePath"/>
-    <ScrollView
-        android:id="@+id/scroll" 
-        android:layout_width="wrap_content" 
-        android:layout_height="wrap_content"
-        android:layout_below="@id/barButtons"> 
-        <HorizontalScrollView android:id="@+id/scroll_nor" 
-            android:layout_width="fill_parent" 
-            android:layout_height="fill_parent">
-            
+		<Button
+			android:layout_height="wrap_content"
+			android:text="Save"
+			android:layout_width="wrap_content"
+			android:id="@+id/bSave"/>
 
-        </HorizontalScrollView>
+		<Button
+			android:layout_height="wrap_content"
+			android:text="Save As..."
+			android:layout_width="wrap_content"
+			android:id="@+id/bSaveAs"/>
 
-    </ScrollView>
+	</LinearLayout>
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_toRightOf="@id/bAddSheet"
+		android:id="@+id/txtFilePath"/>
+
+	<ScrollView
+		android:id="@+id/scroll"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/barButtons">
+
+		<HorizontalScrollView
+			android:id="@+id/scroll_nor"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent">
+
+		</HorizontalScrollView>
+
+	</ScrollView>
+
+	<EditText
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:layout_width="wrap_content"
+		android:id="@+id/edNameSheet"
+		android:layout_toRightOf="@id/bAddSheet"
+		android:visibility="gone"/>
 
 </RelativeLayout>
 

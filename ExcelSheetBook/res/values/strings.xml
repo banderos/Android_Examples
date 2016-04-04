@@ -3,5 +3,8 @@
 
     <string name="hello">Hello World, MainActivity!</string>
     <string name="app_name">Testing operation with Excel sheets</string>
-
+	<string name="sheet_operations">+/-</string>
+	<string name="mnuAddSheet">Add sheet</string>
+	<string name="mnuDeleteSheet">Delete sheet</string>
+	<string name="mnuRenameSheet">Rename sheet</string>
 </resources>
