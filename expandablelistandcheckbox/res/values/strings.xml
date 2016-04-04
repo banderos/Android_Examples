@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ExpList</string>
+	<string name="main_no_items">No items</string>
+    <string name="checkbox_text">Selected</string>
+</resources>
